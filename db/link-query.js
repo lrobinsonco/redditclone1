@@ -8,6 +8,10 @@ function add(obj){
   return pg('link').insert(obj);
 }
 
+function upvote(id) {
+  
+}
+
 module.exports = {
   getAll,
   add

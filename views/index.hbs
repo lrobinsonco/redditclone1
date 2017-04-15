@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -21,14 +21,12 @@
     </section>
     <main>
       {{#each data}}
-      <form class= "up" action="/upvote/{{this.id}}" method="post">
-        <button>-U-</button>
-    </form>
+      <div class="link">
+      <a href="/upvote/{{this.id}}">-U-</a>
       <span class="votes">{{this.votes}}</span>
-      <form class= "up" action="/downvote/{{this.id}}" method="post">
-        <button>-D-</button>
-    </form>
-      <span class="title"><a href="{{this.url}}"></a></span>
+      <a href="/downvote/{{this.id}}">-D-</a>
+      <span class="title"><a href="{{this.url}}">{{this.title}}</a></span>
+    </div>
     {{/each}}
     </main>
   </body>
