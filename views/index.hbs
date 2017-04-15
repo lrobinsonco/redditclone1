@@ -52,12 +52,24 @@
             <div class="row">
                 <div class="col-md-12" id="vote-links">
                     <main>
-                        {{#each data}}
+                        <!-- {{#each data}}
                             <div class="link">
                                 <a href="/upvote/{{this.id}}">-U-</a>
                                 <span class="votes">{{this.votes}}</span>
                                 <a href="/downvote/{{this.id}}">-D-</a>
                                 <span class="title"><a href="{{this.url}}">{{this.title}}</a></span>
+                            </div>
+                        {{/each}} -->
+                        {{#each data}}
+                            <div class="link">
+                                <form class="" action="/upvote/{{id}}" method="post">
+                                    <button class="up btn btn-default"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+                                </form>
+                                <span class="votes">{{votes}}</span>
+                                <form class="" action="/downvote/{{id}}" method="post">
+                                    <button class="down btn btn-defualt"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></button>
+                                </form>
+                                <span class="title"><a href="{{url}}">{{title}}</a></span>
                             </div>
                         {{/each}}
                     </main>

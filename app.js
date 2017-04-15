@@ -27,6 +27,20 @@ app.post('/add-link', (req, res) => {
   });
 });
 
+app.post('/upvote/:id', (req, res) => {
+  linkQuery.upVote(req.params.id)
+  .then(()=> {
+    res.redirect('/');
+  });
+});
+
+app.post('/downvote/:id', (req, res) => {
+  linkQuery.downVote(req.params.id)
+  .then(()=> {
+    res.redirect('/');
+  });
+});
+
 app.listen(port, () => {
   console.log('listening' + port);
 });
