@@ -3,9 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>redditclone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
   </head>
   <body>
-    <h1>reddit clone</h1>
+    <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button> -->
+            <p class="navbar-text">REDDIT(CLONE)</p>
+        </div>
+        <!-- <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/addthought">ADD NEW</a></li>
+                <li><a href="/">HOME</a></li>
+            </ul>
+        </div> -->
+    </div>
+</nav>
+    <h1>URL VOTER</h1>
     <section class="submit-link">
       <form action="/add-link" method="post">
         <div>
@@ -29,5 +52,7 @@
     </div>
     {{/each}}
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
