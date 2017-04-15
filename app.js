@@ -12,9 +12,16 @@ app.get('/', (req, res) => {
 const data = [{
   id: 0,
   votes: 35,
-  url: 'www.google.com',
+  url: 'https://www.google.com',
   title: 'hello'
+},
+{
+  id: 1,
+  votes: 3,
+  url: 'https://www.wunderground.com',
+  title: 'hi'
 }];
+res.render('index', {data})
 });
 
 app.listen(port, () => {

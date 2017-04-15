@@ -6,6 +6,30 @@
   </head>
   <body>
     <h1>reddit clone</h1>
-
+    <section class="submit-link">
+      <form action="/add-link" method="post">
+        <div>
+          <label for="url">URL</label>
+        <input type="text" name="url" value="">
+      </div>
+      <div>
+        <label for="title">TITLE</label>
+      <input type="text" name="title" value="">
+    </div>
+    <button>Submit</button>
+      </form>
+    </section>
+    <main>
+      {{#each data}}
+      <form class= "up" action="/upvote/{{this.id}}" method="post">
+        <button>-U-</button>
+    </form>
+      <span class="votes">{{this.votes}}</span>
+      <form class= "up" action="/downvote/{{this.id}}" method="post">
+        <button>-D-</button>
+    </form>
+      <span class="title"><a href="{{this.url}}"></a></span>
+    {{/each}}
+    </main>
   </body>
 </html>
