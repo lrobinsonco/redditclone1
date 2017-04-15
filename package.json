@@ -1,0 +1,27 @@
+{
+  "name": "redditclone1",
+  "version": "1.0.0",
+  "description": "build and burn of reddit clone using postgres",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrobinsonco/redditclone1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrobinsonco/redditclone1/issues"
+  },
+  "homepage": "https://github.com/lrobinsonco/redditclone1#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "hbs": "^4.0.1",
+    "knex": "^0.12.9",
+    "pg": "^6.1.5"
+  }
+}
