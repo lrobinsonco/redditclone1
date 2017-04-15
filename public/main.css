@@ -1,0 +1,37 @@
+body{
+  font-family: 'Dosis', sans-serif;
+}
+
+#head{
+  margin-left: 80px;
+}
+
+/*.form-horizontal{
+  margin-bottom: 30px;
+  margin-left: 40px;
+}*/
+
+.center-block {
+width:400px;
+padding:20px;
+background-color:#4375d7;
+color:#0e0e0d
+}
+
+.inputs{
+  padding: 10px;
+}
+input{
+  width: 100%;
+}
+
+button{
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.link{
+  margin: 20px;
+  margin-left: 200px;
+  font-size: large;
+}
