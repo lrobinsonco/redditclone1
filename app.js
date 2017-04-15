@@ -1,27 +1,29 @@
 const express = require('express');
-const app = express()
-const port = 3000
+const linkQuery = require('./db/link-query');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 3000;
 
 app.set('view engine', 'hbs');
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
-//   linkQuery.getAll()
-//   .then(data => {
-//   res.render('index', {data});
-// });
-const data = [{
-  id: 0,
-  votes: 35,
-  url: 'https://www.google.com',
-  title: 'hello'
-},
-{
-  id: 1,
-  votes: 3,
-  url: 'https://www.wunderground.com',
-  title: 'hi'
-}];
-res.render('index', {data})
+  linkQuery.getAll()
+  .then(data => {
+  res.render('index', {data});
+});
+});
+
+app.post('/add-link', (req, res) => {
+  linkQuery.add(req.body)
+  .then(() => {
+    res.redirect('/');
+  });
 });
 
 app.listen(port, () => {
