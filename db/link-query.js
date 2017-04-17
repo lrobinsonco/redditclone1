@@ -9,11 +9,11 @@ function add(obj){
 }
 
 function upVote(id) {
-  return pg('link').where('id', '=', id).increment('votes', 1)
+  return pg('link').where('id', '=', id).increment('votes', 1);
 }
 
 function downVote(id) {
-  return pg('link').where('id', '=', id).decrement('votes', 1)
+  return pg('link').where('id', '=', id).decrement('votes', 1);
 }
 
 module.exports = {

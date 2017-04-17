@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>redditclone</title>
+    <script src="https://use.fontawesome.com/9dcc45b22a.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
@@ -63,13 +64,16 @@
                         {{#each data}}
                             <div class="link">
                                 <form class="" action="/upvote/{{id}}" method="post">
-                                    <button class="up btn btn-default"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+                                    <button class="up btn btn-default">
+                                      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                    </button>
                                 </form>
                                 <span class="votes">{{votes}}</span>
-                                <form class="" action="/downvote/{{id}}" method="post">
-                                    <button class="down btn btn-defualt"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></button>
-                                </form>
                                 <span class="title"><a href="{{url}}">{{title}}</a></span>
+                                <form class="" action="/downvote/{{id}}" method="post">
+                                    <button class="down btn btn-defualt"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+                                </form>
+                                <!-- <span class="title"><a href="{{url}}">{{title}}</a></span> -->
                             </div>
                         {{/each}}
                     </main>
