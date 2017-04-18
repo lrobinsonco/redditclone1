@@ -4,6 +4,22 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// bcrypt
+var bcrypt = require('bcrypt');
+const saltRounds = 10;
+const myPlaintextPassword = 's0/\/\P4$$w0rD';
+const someOtherPlaintextPassword = 'not_bacon';
+
+// bcrypt saltRounds
+bcrypt.genSalt(saltRounds).then(salt =>{
+  console.log(salt);
+  bcrypt.hash(myPlaintextPassword, salt).then(hash => {
+    console.log(hash);
+  });
+});
+
+// bcrypt.compare('not_bacon', kjfhdsjhf).then(isTrue => console.log(isTrue));
+
 app.set('view engine', 'hbs');
 
 app.use(express.static('public'));

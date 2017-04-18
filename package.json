@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/lrobinsonco/redditclone1#readme",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
