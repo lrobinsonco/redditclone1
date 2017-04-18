@@ -1,6 +1,6 @@
 const config = require("../knexfile");
 
-const environment = 'development';
+const environment = process.env.NODE_ENV || 'development';
 
 const pg = require('knex')(config[environment]);
 
