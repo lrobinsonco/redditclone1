@@ -15,7 +15,8 @@ body{
 width:400px;
 padding:20px;
 background-color:#4375d7;
-color:#0e0e0d
+color:#0e0e0d;
+border-radius: 25px;
 }
 
 .inputs{
@@ -27,11 +28,20 @@ input{
 
 button{
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .link{
   margin: 20px;
-  margin-left: 200px;
+  margin-left: 100px;
   font-size: large;
+}
+
+#up{
+  color: blue;
+  background-color: grey;
+}
+
+#down{
+  color: red;
 }

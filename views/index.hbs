@@ -40,40 +40,31 @@
                     <form class="form-horizontal" action="/add-link" method="post">
                         <div class="inputs">
                             <label for="url">URL</label>
-                            <input type="text" name="url" value="">
+                            <input type="text" name="url" value="" placeholder="https://www.entirelink.com">
                         </div>
                         <div class="inputs">
                             <label for="title">TITLE</label>
-                            <input type="text" name="title" value="">
+                            <input type="text" name="title" value="" placeholder="witty title">
                         </div>
-                        <button>Submit</button>
+                        <button class="btn btn-success">Submit</button>
                     </form>
                 </section>
             </div>
             <div class="row">
                 <div class="col-md-12" id="vote-links">
                     <main>
-                        <!-- {{#each data}}
-                            <div class="link">
-                                <a href="/upvote/{{this.id}}">-U-</a>
-                                <span class="votes">{{this.votes}}</span>
-                                <a href="/downvote/{{this.id}}">-D-</a>
-                                <span class="title"><a href="{{this.url}}">{{this.title}}</a></span>
-                            </div>
-                        {{/each}} -->
                         {{#each data}}
-                            <div class="link">
+                            <div class="link well well-lg responsive">
                                 <form class="" action="/upvote/{{id}}" method="post">
-                                    <button class="up btn btn-default">
+                                    <button class="up btn btn-default" id="up">
                                       <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                                     </button>
                                 </form>
                                 <span class="votes">{{votes}}</span>
                                 <span class="title"><a href="{{url}}">{{title}}</a></span>
                                 <form class="" action="/downvote/{{id}}" method="post">
-                                    <button class="down btn btn-defualt"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+                                    <button class="down btn btn-defualt" id="down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
                                 </form>
-                                <!-- <span class="title"><a href="{{url}}">{{title}}</a></span> -->
                             </div>
                         {{/each}}
                     </main>
