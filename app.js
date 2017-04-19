@@ -68,7 +68,6 @@ linkQuery.addComment(req.body)
 
 
 app.get('/comments/:id', (req, res) => {
-  console.log(req.params.id);
   linkQuery.getPage(req.params.id)
   .then(data => {
   res.render('comments', {data});

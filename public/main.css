@@ -37,11 +37,30 @@ button{
   font-size: large;
 }
 
+.votes{
+  margin: 20px;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+.title{
+  margin: 20px;
+  padding-top: 50px;
+  margin-left: 70px;
+}
+
 #up{
   color: blue;
   background-color: grey;
+  margin-bottom: 20px;
 }
 
 #down{
   color: red;
+  margin-bottom: 10px;
+}
+
+.comment{
+  margin: 20px;
+  margin-left: 100px;
 }

@@ -9,20 +9,44 @@
     <link href="/main.css" rel="stylesheet">
 </head>
   <body>
-    <div class="">
-      {{#each data}}
-      <form class="form-horizontal" action="/add-comment/{{id}}" method="post">
-        {{/each}}
-          <div class="inputs">
-              <label for="comment">comment</label>
-              <input type="text" name="comment_text" value="">
-          </div>
-          <button class="btn sm">Submit</button>
-      </form>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button> -->
+                <p class="navbar-text">REDDIT(CLONE)</p>
+                <p class="navbar-text"><a href="/">HOME</a></p>
+            </div>
+            <!-- <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/addthought">ADD NEW</a></li>
+                <li><a href="/">HOME</a></li>
+            </ul>
+        </div> -->
+        </div>
+    </nav>
+    <div class="center-block">
+        <section class="submit-comment">
+          {{#each data}}
+            <form class="form-horizontal" action="/add-comment/{{id}}" method="post">
+              {{/each}}
+                <div class="inputs">
+                    <label for="comment">COMMENT</label>
+                    <input type="text" name="comment_text" value="" placeholder="insert rude comment here">
+                </div>
+                <button class="btn btn-success">Submit</button>
+            </form>
+        </section>
     </div>
-    <div class="">
+    <div class="col-md-12" id="comment-boxes">
       {{#each data}}
-      <h1>{{comment_text}}</h1>
+      <div class="comment well well-sm responsive">
+      <h3>"{{comment_text}}"</h3>
+    </div>
       {{/each}}
     </div>
 
