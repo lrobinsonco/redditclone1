@@ -16,9 +16,19 @@ function downVote(id) {
   return pg('link').where('id', '=', id).decrement('votes', 1);
 }
 
+function getPage(id){
+  return pg('comments').fullOuterJoin('link', 'link.id', 'comments.link_id').select('*').where('link.id', '=', id);
+}
+
+function addComment(obj){
+  return pg('comments').insert(obj);
+}
+
 module.exports = {
   getAll,
   add,
   upVote,
   downVote,
+  getPage,
+  addComment
 };

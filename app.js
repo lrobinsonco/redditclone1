@@ -57,6 +57,26 @@ app.post('/downvote/:id', (req, res) => {
   });
 });
 
+app.post('/add-comment/:id', (req, res) => {
+req.body.link_id = req.params.id;
+var comId = req.params.id;
+linkQuery.addComment(req.body)
+.then( data => {
+  res.redirect('/comments/' + comId);
+});
+  });
+
+
+app.get('/comments/:id', (req, res) => {
+  console.log(req.params.id);
+  linkQuery.getPage(req.params.id)
+  .then(data => {
+  res.render('comments', {data});
+});
+});
+
+
+
 app.listen(port, () => {
   console.log('listening' + port);
 });
