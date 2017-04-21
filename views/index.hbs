@@ -14,20 +14,8 @@
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
-  <span class="sr-only">Toggle navigation</span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</button> -->
                 <p class="navbar-text">REDDIT(CLONE)</p>
             </div>
-            <!-- <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/addthought">ADD NEW</a></li>
-                <li><a href="/">HOME</a></li>
-            </ul>
-        </div> -->
         </div>
     </nav>
     <div class="container">
@@ -63,6 +51,7 @@
                                 <span class="votes">{{votes}}</span>
                                 <span class="title"><a href="{{url}}">{{title}}</a></span>
                                 <a class= "btn btn-success" href="/comments/{{id}}">comment</a>
+                                <button class= "delete btn btn-danger" data-id="{{id}}">delete</button>
                                 <form class="" action="/downvote/{{id}}" method="post">
                                     <button class="down btn btn-defualt" id="down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
                                 </form>
@@ -78,6 +67,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

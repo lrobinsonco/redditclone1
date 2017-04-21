@@ -74,6 +74,13 @@ app.get('/comments/:id', (req, res) => {
 });
 });
 
+app.delete('/link/:id', (req,res)=>{
+  linkQuery.deletePost(req.params.id)
+  .then(()=>{
+    res.redirect('/');
+  });
+});
+
 
 
 app.listen(port, () => {

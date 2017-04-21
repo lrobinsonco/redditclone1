@@ -24,11 +24,16 @@ function addComment(obj){
   return pg('comments').insert(obj);
 }
 
+function deletePost(id) {
+  return pg('link').del().where('id', '=', id);
+}
+
 module.exports = {
   getAll,
   add,
   upVote,
   downVote,
   getPage,
-  addComment
+  addComment,
+  deletePost
 };
